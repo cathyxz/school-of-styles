@@ -2448,6 +2448,8 @@
 
 			.thumbnails > div > div.description a {
 				display: inline;
+				font-weight: bold;
+				background-color: #FCCA08;
 			}
 
 			.thumbnails > div > :last-child {
