@@ -9,8 +9,14 @@
   <title>Pete Styles</title>
   <style amp-custom>
     /* CSS GOES HERE */
+
+		body {
+			background-color: #293241;
+			color: #EE6C4D;
+		}
 		#header-bar {
 			height: 60px;
+			background-color: white;
 		}
 
     header .hamburger {
@@ -44,6 +50,13 @@
 			width: 75%;
 		}
 
+		@media only screen and (max-width: 600px) {
+		#choreography amp-youtube {
+			max-width: 100%;
+			top: 20%;
+		}
+	}
+
 		.page {
 			position: relative;
 			height: calc(100vh - 60px);
@@ -59,7 +72,16 @@
 		.byline {
 			position: absolute;
 			bottom: 20px;
-			color: #EE6C4D;
+			margin: 10px;
+		}
+
+		h1.title {
+			text-align: center;
+		}
+
+		amp-youtube {
+			max-width: 60%;
+			margin: auto;
 		}
   </style>
 </head>
@@ -88,7 +110,7 @@
 			</div>
     </div>
     <div id="choreography" class="page">
-      <h1>Choreography Reel</h1>
+      <h1 class="title">Choreography Reel</h1>
       <amp-youtube width="480"
         height="270"
         layout="responsive"
@@ -97,6 +119,7 @@
     </div>
 
     <div id="contact" class="page">
+			<h1 class="title">Contact</h1>
       <amp-iframe
         width="640"
         height="1270"
