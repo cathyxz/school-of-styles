@@ -1,0 +1,317 @@
+<html ⚡>
+<head>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+	<script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Pete Styles</title>
+  <style amp-custom>
+
+		@font-face {
+			font-family: 'FontAwesome';
+			src: url('assets/fonts/fontawesome-webfont.woff2') format("woff2");
+			src:  url('assets/fonts/fontawesome-webfont.woff2') format('woff2'), url('assets/fonts/fontawesome-webfont.woff') format('woff'), url('assets/fonts/fontawesome-webfont.ttf') format('truetype'), url('assets/fonts/fontawesome-webfont.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		.fa {
+			display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: inherit;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		.fa-2x {
+			font-size: 2em;
+		}
+		.fa-3x {
+			font-size: 3em;
+		}
+		.fa-4x {
+			font-size: 4em;
+		}
+		.fa-5x {
+			font-size: 5em;
+		}
+
+		.fa-envelope:before {
+			content: "\f0e0";
+		}
+
+		.fa-youtube-play:before {
+			content: "\f16a";
+		}
+
+		.fa-instagram:before {
+			content: "\f16d";
+		}
+
+		@font-face {
+			font-family:clearface;
+			src:url("assets/fonts/clearface.ttf") format("ttf");
+			font-weight:300;
+			font-style:normal;
+		}
+
+		@font-face{
+			font-family:futura-pt;
+			src:url("assets/fonts/futura-pt-300-normal.woff") format("woff");
+			font-weight:300;
+			font-style:normal;
+		}
+
+		body {
+			background-color: #293241;
+			color: #EE6C4D;
+			font-family: clearface;
+		}
+
+		h2 {
+			color: #FFFFFF;
+			text-align: center;
+			text-transform: uppercase;
+			margin: 0;
+		}
+
+		h3 {
+			text-align: center;
+			color: #EE6C4D;
+		}
+
+		header {
+			position: fixed;
+			top: 0;
+			z-index: 999;
+		}
+
+		#header-bar {
+			height: 60px;
+		}
+
+    header .hamburger {
+      position: absolute;
+			top: 0px;
+			height: 60px;
+			width: 60px;
+			border: none;
+    }
+
+    .hamburger-icon {
+      -webkit-mask: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMzJweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHdpZHRoPSIzMnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNNCwxMGgyNGMxLjEwNCwwLDItMC44OTYsMi0ycy0wLjg5Ni0yLTItMkg0QzIuODk2LDYsMiw2Ljg5NiwyLDhTMi44OTYsMTAsNCwxMHogTTI4LDE0SDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDIgIHMwLjg5NiwyLDIsMmgyNGMxLjEwNCwwLDItMC44OTYsMi0yUzI5LjEwNCwxNCwyOCwxNHogTTI4LDIySDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDJzMC44OTYsMiwyLDJoMjRjMS4xMDQsMCwyLTAuODk2LDItMiAgUzI5LjEwNCwyMiwyOCwyMnoiLz48L3N2Zz4=') no-repeat 50% 50%;
+
+			mask: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMzJweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHdpZHRoPSIzMnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNNCwxMGgyNGMxLjEwNCwwLDItMC44OTYsMi0ycy0wLjg5Ni0yLTItMkg0QzIuODk2LDYsMiw2Ljg5NiwyLDhTMi44OTYsMTAsNCwxMHogTTI4LDE0SDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDIgIHMwLjg5NiwyLDIsMmgyNGMxLjEwNCwwLDItMC44OTYsMi0yUzI5LjEwNCwxNCwyOCwxNHogTTI4LDIySDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDJzMC44OTYsMiwyLDJoMjRjMS4xMDQsMCwyLTAuODk2LDItMiAgUzI5LjEwNCwyMiwyOCwyMnoiLz48L3N2Zz4=') no-repeat 50% 50%;
+			background-color: white;
+    }
+
+		ul.nav {
+			list-style-type: none;
+			margin-top: 60px;
+			padding: 0;
+		}
+
+		.nav li {
+			margin: 30px 10px;
+			text-align: center;
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+
+		amp-sidebar {
+			width: 75%;
+		}
+
+		.nav a {
+			color: black;
+			text-decoration: none;
+		}
+
+		.nav a:hover {
+			color:#EE6C4D;
+		}
+
+		@media only screen and (max-width: 600px) {
+			amp-youtube.video {
+				max-width: 100%;
+				min-width: 50%;
+			}
+		}
+
+		h1 {
+			font-size: 3em;
+		}
+
+		footer {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			background-color: #EE6C4D;
+			height: 60px;
+			line-height: 60px;
+			position: absolute;
+			width: 100vw;
+			bottom: 0;
+		}
+
+		footer a span {
+			margin: 15px;
+			color: white;
+		}
+
+		.fill {
+			display: block;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+
+		#content {
+			padding: 0 12px 280px 12px;
+			box-sizing: border-box;
+			position: relative;
+			top: 60px;
+		}
+
+		.text {
+			position: relative;
+			top: 80px;
+		}
+
+		.paragraph {
+			position: relative;
+			padding: 12px 8px;
+			line-height: 1.5em;
+		}
+
+		p {
+			margin: 0;
+		}
+
+		.video-container {
+			display: grid;
+			grid-template-columns: 50% 50%;
+		}
+
+		.video-container amp-youtube {
+			margin: 4px;
+		}
+
+		.underline {
+			text-align: center;
+		}
+
+		.title {
+			margin-bottom: 12px;
+		}
+
+  </style>
+</head>
+<body>
+	<amp-sidebar id="sidebar"
+		class="sample-sidebar"
+		layout="nodisplay">
+		<ul class="nav">
+			<li><a href="/">About Me</a></li>
+			<li><a href="/choreography">Choreography</a></li>
+			<li><a href="/schoolofstyles">School of Styles</a></li>
+			<li><a href="/events">Corporate Events</a></li>
+			<li><a href="/contact">Contact</a></li>
+		</ul>
+	</amp-sidebar>
+  <header>
+    <div id="header-bar">
+			<button class="hamburger hamburger-icon"
+				on="tap:sidebar.toggle" aria-label="Click to open sidebar">
+      </button>
+    </div>
+
+  </header>
+  <main>
+		<div id="content">
+			<div class="title">
+				<h2>Choreography</h2>
+				<div class="underline">
+					<svg width="156" height="17" viewBox="0 0 156 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect width="156" height="3" fill="white" fill-opacity="0.8"/>
+						<rect x="37" y="7" width="81" height="3" fill="white" fill-opacity="0.8"/>
+						<rect x="67" y="14" width="22" height="3" fill="white" fill-opacity="0.8"/>
+					</svg>
+				</div>
+			</div>
+			<amp-img src="images/fulls/choreography.jpg"
+				width="1600"
+				height="900"
+				layout="responsive"
+				alt="Choreographer calling counts">
+			</amp-img>
+			<h3>Music Videos / Stage Shows / Short Films</h3>
+			<div class="video-container">
+				<amp-youtube class="small-video"
+					width="480"
+					height="270"
+					layout="responsive"
+					data-videoid="7vqqPkDsLNA">
+				</amp-youtube>
+				<amp-youtube class="small-video"
+					width="480"
+					height="270"
+					layout="responsive"
+					data-videoid="vX8DN2dlQTI">
+				</amp-youtube>
+				<amp-youtube class="small-video"
+					width="480"
+					height="270"
+					layout="responsive"
+					data-videoid="9N3BufT8bmk">
+				</amp-youtube>
+				<amp-youtube class="small-video"
+					width="480"
+					height="270"
+					layout="responsive"
+					data-videoid="IR4diYtTlDI">
+				</amp-youtube>
+				<amp-youtube class="small-video"
+					width="480"
+					height="270"
+					layout="responsive"
+					data-videoid="xcrkM-YZnzs">
+				</amp-youtube>
+				<amp-youtube class="small-video"
+					width="480"
+					height="270"
+					layout="responsive"
+					data-videoid="SrBlzaoOHGM">
+				</amp-youtube>
+				<amp-youtube class="small-video"
+				width="480"
+				height="270"
+				layout="responsive"
+				data-videoid="3VZqg8SC9V8">
+			</amp-youtube>
+			<amp-youtube class="small-video"
+				width="480"
+				height="270"
+				layout="responsive"
+				data-videoid="BKMUKNHt2u0">
+			</amp-youtube>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<a href="mailto:standbypete@gmail.com"><span class="icon fa fa-2x fa-envelope"></span></a>
+		<a href="https://www.instagram.com/schoolofstyles/"><span class="icon fa fa-2x fa-instagram"></span></a>
+		<a href="https://www.youtube.com/user/peterFrancis"><span class="icon fa fa-2x fa-youtube-play"></span></a>
+	</footer>
+</body>
+</html>
+
