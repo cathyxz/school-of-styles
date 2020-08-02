@@ -54,6 +54,13 @@
 			content: "\f16d";
 		}
 
+		@font-face {
+			font-family:clearface;
+			src:url("assets/fonts/clearface.ttf") format("ttf");
+			font-weight:300;
+			font-style:normal;
+		}
+
 		@font-face{
 			font-family:futura-pt;
 			src:url("assets/fonts/futura-pt-300-normal.woff") format("woff");
@@ -61,65 +68,27 @@
 			font-style:normal;
 		}
 
-		@font-face{
-			font-family:futura-pt;
-			src:url("assets/fonts/futura-pt-400-normal.woff") format("woff");
-			font-weight:400;
-			font-style:normal;
-		}
-
-		@font-face{
-			font-family:futura-pt;
-			src:url("assets/fonts/futura-pt-500-normal.woff") format("woff");
-			font-weight:500;
-			font-style:normal;
-		}
-
-		@font-face{
-			font-family:futura-pt;
-			src:url("assets/fonts/futura-pt-700-normal.woff") format("woff");
-			font-weight:700;
-			font-style:normal;
-		}
-
-		@font-face{
-			font-family:futura-pt;
-			src:url("assets/fonts/futura-pt-300-italic.woff") format("woff");
-			font-weight:300;
-			font-style:italic;
-		}
-
-		@font-face{
-			font-family:futura-pt;
-			src:url("assets/fonts/futura-pt-700-italic.woff") format("woff");
-			font-weight:700;
-			font-style:italic;
-		}
-
 		body {
 			background-color: #293241;
 			color: #EE6C4D;
-			font-family: futura-pt;
+			font-family: clearface;
 		}
 
 		header {
-			position: sticky;
+			position: fixed;
 			top: 0;
 			z-index: 999;
 		}
 
 		#header-bar {
-			height: 80px;
-			background-color: white;
-			opacity: 0.8;
+			height: 60px;
 		}
 
     header .hamburger {
       position: absolute;
-      right: 0px;
 			top: 0px;
-			height: 80px;
-			width: 80px;
+			height: 60px;
+			width: 60px;
 			border: none;
     }
 
@@ -127,7 +96,7 @@
       -webkit-mask: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMzJweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHdpZHRoPSIzMnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNNCwxMGgyNGMxLjEwNCwwLDItMC44OTYsMi0ycy0wLjg5Ni0yLTItMkg0QzIuODk2LDYsMiw2Ljg5NiwyLDhTMi44OTYsMTAsNCwxMHogTTI4LDE0SDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDIgIHMwLjg5NiwyLDIsMmgyNGMxLjEwNCwwLDItMC44OTYsMi0yUzI5LjEwNCwxNCwyOCwxNHogTTI4LDIySDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDJzMC44OTYsMiwyLDJoMjRjMS4xMDQsMCwyLTAuODk2LDItMiAgUzI5LjEwNCwyMiwyOCwyMnoiLz48L3N2Zz4=') no-repeat 50% 50%;
 
 			mask: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMzJweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHdpZHRoPSIzMnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNNCwxMGgyNGMxLjEwNCwwLDItMC44OTYsMi0ycy0wLjg5Ni0yLTItMkg0QzIuODk2LDYsMiw2Ljg5NiwyLDhTMi44OTYsMTAsNCwxMHogTTI4LDE0SDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDIgIHMwLjg5NiwyLDIsMmgyNGMxLjEwNCwwLDItMC44OTYsMi0yUzI5LjEwNCwxNCwyOCwxNHogTTI4LDIySDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDJzMC44OTYsMiwyLDJoMjRjMS4xMDQsMCwyLTAuODk2LDItMiAgUzI5LjEwNCwyMiwyOCwyMnoiLz48L3N2Zz4=') no-repeat 50% 50%;
-			background-color: #EE6C4D;
+			background-color: white;
     }
 
 		ul.nav {
@@ -148,35 +117,21 @@
 		}
 
 		@media only screen and (max-width: 600px) {
-		#choreography amp-youtube {
-			max-width: 100%;
-		}
-	}
-
-		.page {
-			position: relative;
-			height: calc(100vh - 80px);
-			width: 100vw;
+			amp-youtube.video {
+				max-width: 100%;
+			}
 		}
 
-		#landing {
-			background-image: url("images/fulls/landing.jpg");
+		#background {
+			background-image: url("images/fulls/headshot.jpg");
 			background-position: center;
 			background-size: cover;
-		}
-
-		.byline {
-			position: absolute;
-			bottom: 20px;
-			margin: 10px;
 		}
 
 		h1 {
 			font-size: 3em;
 		}
-		h1.title {
-			text-align: center;
-		}
+
 
 		amp-youtube {
 			max-width: 60%;
@@ -190,6 +145,9 @@
 			background-color: #EE6C4D;
 			height: 60px;
 			line-height: 60px;
+			position: absolute;
+			width: 100vw;
+			bottom: 0;
 		}
 
 		footer a span {
@@ -197,11 +155,44 @@
 			color: white;
 		}
 
+		.mask {
+			display: block;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-color: #293241;
+			opacity: 0.7;
+		}
+
+		#content {
+			padding: 20px 12px 160px 12px;
+			box-sizing: border-box;
+			position: relative;
+		}
+
+		.text {
+			position: relative;
+			top: 80px;
+		}
+
+		.paragraph {
+			position: relative;
+			padding: 8px;
+		}
+
+		p {
+			margin: 0;
+		}
 
   </style>
 </head>
 <body>
-	<amp-sidebar id="sidebar" class="sample-sidebar" layout="nodisplay">
+	<amp-sidebar id="sidebar"
+		class="sample-sidebar"
+		layout="nodisplay">
 		<ul class="nav">
 			<li>About Me</li>
 			<li>Choreography</li>
@@ -211,24 +202,36 @@
 	</amp-sidebar>
   <header>
     <div id="header-bar">
-      <button class="hamburger hamburger-icon" on="tap:sidebar.toggle" aria-label="Click to open sidebar">
+			<button class="hamburger hamburger-icon"
+				on="tap:sidebar.toggle" aria-label="Click to open sidebar">
       </button>
     </div>
 
   </header>
   <main>
-    <div id="landing" class="page">
-			<div class="byline">
+    <div id="background">
+			<div id="content">
 				<h1>Pete Styles</h1>
-				<p>Pete styles is an international dancer, choregrapher, and educator from England, currently based in London and LA.</p>
+				<div class="text">
+					<div class="mask"></div>
+					<div class="paragraph">
+						<p>
+							Born and raised in England, Pete now resides between Los Angeles/London working internationally. Renown for his ability to combine different dance-styles within his unique movement of Hip Hop. In addition he has worked with artists such as Cardi B, Kendrick Lemar, Gwen Sefani, Britney Spears, WILL I AM, Sean Paul, Offset, Meek Mill, Kelis, Lindsey Stirling, Jhene Aiko, Big Sean, Kylie Minogue and more.
+						</p>
+					</div>
+					<amp-youtube class="video"
+						width="480"
+						height="270"
+						layout="responsive"
+						data-videoid="5Lcto1qszks">
+					</amp-youtube>
+					<div class="paragraph">
+						<p>
+							Pete has an outstanding ability to teach dancers and non-dancers how to move. Whether it be movement coaching for professionals and taking their career to the next level. Coaching actors, artists, teaching online groups or In House classes to a few of the Worlds Best Global Brands. 	Pete does it all from choreographing Gwen Stefani's, "Misery" video to training Travis Barker's kids how to dance. The list goes on.
+						</p>
+					</div>
+				</div>
 			</div>
-    </div>
-    <div id="choreography" class="page">
-			<amp-youtube width="480"
-        height="270"
-        layout="responsive"
-        data-videoid="5Lcto1qszks">
-      </amp-youtube>
     </div>
 	</main>
 	<footer>
