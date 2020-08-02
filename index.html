@@ -155,7 +155,7 @@
 			color: white;
 		}
 
-		.mask {
+		.fill {
 			display: block;
 			overflow: hidden;
 			position: absolute;
@@ -163,12 +163,24 @@
 			left: 0;
 			bottom: 0;
 			right: 0;
-			background-color: #293241;
-			opacity: 0.7;
+		}
+
+		.text-mask {
+			background-image: linear-gradient(rgba(41, 50, 65, 0.6), rgba(41, 50, 65, 1));
+		}
+
+
+		.image-mask {
+			background-image: linear-gradient(
+				rgba(41, 50, 65, 0),
+				rgba(41, 50, 65, 0.5),
+				rgba(41, 50, 65, 0.9),
+				rgba(41, 50, 65, 1)
+			);
 		}
 
 		#content {
-			padding: 20px 12px 160px 12px;
+			padding: 20px 12px 320px 12px;
 			box-sizing: border-box;
 			position: relative;
 		}
@@ -180,7 +192,8 @@
 
 		.paragraph {
 			position: relative;
-			padding: 8px;
+			padding: 12px 8px;
+			line-height: 1.5em;
 		}
 
 		p {
@@ -211,10 +224,11 @@
   </header>
   <main>
     <div id="background">
+			<div class="image-mask fill"></div>
 			<div id="content">
 				<h1>Pete Styles</h1>
 				<div class="text">
-					<div class="mask"></div>
+					<div class="text-mask fill"></div>
 					<div class="paragraph">
 						<p>
 							Born and raised in England, Pete now resides between Los Angeles/London working internationally. Renown for his ability to combine different dance-styles within his unique movement of Hip Hop. In addition he has worked with artists such as Cardi B, Kendrick Lemar, Gwen Sefani, Britney Spears, WILL I AM, Sean Paul, Offset, Meek Mill, Kelis, Lindsey Stirling, Jhene Aiko, Big Sean, Kylie Minogue and more.
