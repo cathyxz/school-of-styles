@@ -5,6 +5,7 @@
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
   <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 	<script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
+	<script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,6 +53,12 @@
 
 		.fa-instagram:before {
 			content: "\f16d";
+		}
+
+		.fa-remove:before,
+		.fa-close:before,
+		.fa-times:before {
+			content: "\f00d";
 		}
 
 		@font-face {
@@ -210,6 +217,28 @@
 		}
 
 
+		.lightbox {
+      background: rgba(0,0,0,0.8);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+		}
+
+		#close-lightbox {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 8px;
+			color: #ffffff;
+		}
+
+		#close-lightbox svg {
+			width: 36px;
+			height: 36px;
+		}
 
   </style>
 </head>
@@ -230,7 +259,25 @@
 			<button class="hamburger hamburger-icon"
 				on="tap:sidebar.toggle" aria-label="Click to open sidebar">
       </button>
-    </div>
+		</div>
+		<amp-lightbox id="lightbox" layout="nodisplay">
+			<div class="lightbox">
+				<amp-youtube class="video"
+					width="320"
+					height="180"
+					layout="fixed"
+					data-videoid="5Lcto1qszks">
+				</amp-youtube>
+				<div id="close-lightbox"
+					on="tap:lightbox.close"
+					role="button"
+					tabindex="1">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+						<path fill="#ffffff" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/>
+					</svg>
+				</div>
+			</div>
+		</amp-lightbox>
 
   </header>
   <main>
@@ -245,12 +292,13 @@
 							Born and raised in England, Pete now resides between Los Angeles/London working internationally. Renown for his ability to combine different dance-styles within his unique movement of Hip Hop. In addition he has worked with artists such as Cardi B, Kendrick Lemar, Gwen Sefani, Britney Spears, WILL I AM, Sean Paul, Offset, Meek Mill, Kelis, Lindsey Stirling, Jhene Aiko, Big Sean, Kylie Minogue and more.
 						</p>
 					</div>
-					<amp-youtube class="video"
+					<amp-img src="images/fulls/choreo_cover.jpg"
 						width="480"
 						height="270"
 						layout="responsive"
-						data-videoid="5Lcto1qszks">
-					</amp-youtube>
+						role="button"
+						tabindex="1"
+						on="tap:lightbox"></amp-img>
 					<div class="paragraph">
 						<p>
 							Pete has an outstanding ability to teach dancers and non-dancers how to move. Whether it be movement coaching for professionals and taking their career to the next level. Coaching actors, artists, teaching online groups or In House classes to a few of the Worlds Best Global Brands. 	Pete does it all from choreographing Gwen Stefani's, "Misery" video to training Travis Barker's kids how to dance. The list goes on.
