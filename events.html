@@ -235,10 +235,6 @@
 			line-height: 1.5em;
 		}
 
-		p {
-			margin: 0;
-		}
-
 		.lightbox {
       background: rgba(0,0,0,0.8);
       width: 100%;
@@ -288,14 +284,6 @@
 </head>
 <body>
 
-	<amp-state id="videoId">
-		<script type="application/json">
-			{
-				"videoId": "5Lcto1qszks"
-			}
-		</script>
-	</amp-state>
-
 	<amp-sidebar id="sidebar"
 		class="sample-sidebar"
 		layout="nodisplay">
@@ -313,30 +301,11 @@
 				on="tap:sidebar.toggle" aria-label="Click to open sidebar">
       </button>
 		</div>
-		<amp-lightbox id="lightbox" layout="nodisplay">
-			<div class="lightbox">
-				<amp-youtube class="video"
-					width="320"
-					height="180"
-					layout="fixed"
-					data-videoid="5Lcto1qszks"
-					[data-videoid]="videoId">
-				</amp-youtube>
-				<div id="close-lightbox"
-					on="tap:lightbox.close"
-					role="button"
-					tabindex="1">
-					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-						<path fill="#ffffff" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/>
-					</svg>
-				</div>
-			</div>
-		</amp-lightbox>
 
   </header>
   <main>
 		<div class="title">
-			<h2>School of Styles</h2>
+			<h2>Corporate Events</h2>
 			<div class="underline">
 				<svg width="156" height="17" viewBox="0 0 156 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<rect width="156" height="3" fill="white" fill-opacity="0.8"/>
@@ -348,139 +317,30 @@
 		<div id="content">
 			<div class="fill">
 				<div class="image-mask fill"></div>
-				<amp-img src="images/fulls/portrait.jpg"
+				<amp-img src="images/covers/theatre.jpg"
 					class="cover"
 					layout="responsive"
-					height="600"
-					width="400"
-				></amp-img>
-				<amp-img src="images/fulls/classroom.jpg"
-					layout="responsive"
-					height="9"
 					width="16"
-				></amp-img>
-				<amp-img src="images/fulls/zoom.jpg"
-					layout="responsive"
 					height="9"
-					width="16"
 				></amp-img>
 			</div>
 
 			<div class="text">
 				<div class="text-mask fill"></div>
 				<div class="paragraph">
-					<h3>WHAT is School of Styles</h3>
-					<h4>(Classes and Workshops)</h4>
+					<h3>Dance with Styles</h3>
 					<p>
-						School Of Styles is a place to gain great training knowledge about dance and the dance industry itself. A place that you can learn multiple styles such as Hip Hop, Popping, House, Grooves, dancing to Afro Beat music and freestyle.
-					</p>
-					<p>
-						Pete has been an educator of dance for many years now. Not only does he show you the steps. He teaches by breaking down movement so that you can fully understand how to move with your full range, full execution and precision.
-					</p>
-					<p>
-						School of Styles is a place that caters for:
-					</p>
-					<li>
-						<ul>1 on 1 personal training (Online) or (In Studio)</ul>
-						<ul>Group training sessions (Online) or (In Studio)</ul>
-					</li>
-					<p>
-						Outside of these sessions, Pete frequently teaches online dance Intensives. These last throughout the week for both advanced and beginners. For inquiries send a message via the contact page.
+            When employing somebody to partner with a company, whatever the brief, you need an individual or team with a clear vision, strong creative thought, keen attention to detail and a resolute attitude to deliver success.
+          </p>
+
+          <p>
+            Pete has established a host of successful working partnerships with world renowned corporations such as Google, McKinsey, T-Mobile, Burger King, Sony, MTV, NBA, The Olympics, Heineken and more. Pete currently teaches weekly online classes for Google to all Googlers worldwide. Classes of this sort help educate, motivate, reward, incentivise and build relationships internally with employees. Pete frequently teaches these classes online. Whilst hosting live classes at launch events, conferences and different types of corporate events worldwide.
 					</p>
 				</div>
-				<div class="paragraph">
-					<p>
-						Pete has an outstanding ability to teach dancers and non-dancers how to move. Whether it be movement coaching for professionals and taking their career to the next level. Coaching actors, artists, teaching online groups or In House classes to a few of the Worlds Best Global Brands. 	Pete does it all from choreographing Gwen Stefani's, "Misery" video to training Travis Barker's kids how to dance. The list goes on.
-					</p>
-				</div>
-				<div class="paragraph">
-					<h3>Class Videos</h3>
-					<h4>Advanced</h4>
-				</div>
-				<div class="video-container">
-					<amp-img src="images/covers/lion.jpg"
-						width="480"
-						height="270"
-						layout="responsive"
-						on="tap:lightbox,AMP.setState({videoId: '4i_BY9qgWU4'})"
-						role="button"
-						tabindex="1"
-						alt="Lion Class Video by Pete Styles"></amp-img>
-					<amp-img src="images/covers/lurkin.jpg"
-						width="480"
-						height="270"
-						layout="responsive"
-						on="tap:lightbox,AMP.setState({videoId: 'FTr4ZF2vzlg'})"
-						role="button"
-						tabindex="1"
-						alt="Class Video to Lurkin by Chris Brown"></amp-img>
-					<amp-img src="images/covers/apale_rosalia.jpg"
-						width="480"
-						height="270"
-						layout="responsive"
-						on="tap:lightbox,AMP.setState({videoId: 'O-VXb0uwR2w'})"
-						role="button"
-						tabindex="1"
-						alt="Class video to A Pale by Rosalia"></amp-img>
-					<amp-img src="images/covers/natural_disaster.jpg"
-						width="480"
-						height="270"
-						layout="responsive"
-						on="tap:lightbox,AMP.setState({videoId: 'Wo-jHZY-Cp8'})"
-						role="button"
-						tabindex="1"
-						alt="Class video to Natural Disaster by Chris Brown"></amp-img>
-				</div>
-				<div class="paragraph">
-					<h4>Beginners</h4>
-				</div>
-				<div class="video-container">
-					<amp-img src="images/covers/before_i_let_go.jpg"
-						width="480"
-						height="270"
-						layout="responsive"
-						on="tap:lightbox,AMP.setState({videoId: 'GZdBoF5A9Hk'})"
-						role="button"
-						tabindex="1"
-						alt="Beginners class to Before I let go by Beyonce"></amp-img>
-					<amp-img src="images/covers/sicks.jpg"
-						width="480"
-						height="270"
-						layout="responsive"
-						on="tap:lightbox,AMP.setState({videoId: 'nkFPNadwnZo'})"
-						role="button"
-						tabindex="1"
-						alt="PHZ - Sicks Class Video"></amp-img>
-					<amp-img src="images/covers/thats_it.jpg"
-						width="480"
-						height="270"
-						layout="responsive"
-						on="tap:lightbox,AMP.setState({videoId: 'M1cKfqjSb5o'})"
-						role="button"
-						tabindex="1"
-						alt="Class video to That's it by Bebe Rexha"></amp-img>
-				</div>
-				<div class="paragraph">
-					<h4>Kids</h4>
-				</div>
-				<div class="video-container">
-					<amp-img src="images/covers/juice.jpg"
-						width="480"
-						height="270"
-						layout="responsive"
-						on="tap:lightbox,AMP.setState({videoId: 'XAjjpkscCRk'})"
-						role="button"
-						tabindex="1"
-						alt="Class video to Yo Gotti - Juice "></amp-img>
-					<amp-img src="images/covers/i_spy.jpg"
-						width="480"
-						height="270"
-						layout="responsive"
-						on="tap:lightbox,AMP.setState({videoId: 'vUsRz1xkKVk'})"
-						role="button"
-						tabindex="1"
-						alt="Let Go by Johnny Orlando"></amp-img>
-				</div>
+        <amp-img src="images/covers/theatre1.jpg"
+          layout="responsive"
+          width="16"
+          height="9"></amp-img>
 			</div>
 		</div>
 	</main>
