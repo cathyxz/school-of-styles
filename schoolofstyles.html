@@ -7,6 +7,8 @@
   <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 	<script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
 	<script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+	<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -200,6 +202,7 @@
 
 		.text-mask {
 			background-image: linear-gradient(rgba(41, 50, 65, 0.6), rgba(41, 50, 65, 1));
+			z-index: -1;
 		}
 
 
@@ -272,18 +275,37 @@
 			object-position: 40% 50%;
 		}
 
+		.video-container {
+			display: grid;
+			grid-template-columns: 50% 50%;
+			z-index: 2;
+		}
+
+		.video-container amp-img {
+			margin: 4px;
+		}
+
   </style>
 </head>
 <body>
+
+	<amp-state id="videoId">
+		<script type="application/json">
+			{
+				"videoId": "5Lcto1qszks"
+			}
+		</script>
+	</amp-state>
+
 	<amp-sidebar id="sidebar"
 		class="sample-sidebar"
 		layout="nodisplay">
 		<ul class="nav">
-			<li><a href="/">About Me</a></li>
-			<li><a href="/choreography.html">Choreography</a></li>
-			<li><a href="/schoolofstyles.html">School of Styles</a></li>
-			<li><a href="/events.html">Corporate Events</a></li>
-			<li><a href="/contact.html">Contact</a></li>
+			<li><a href="index.html">About Me</a></li>
+			<li><a href="choreography.html">Choreography</a></li>
+			<li><a href="schoolofstyles.html">School of Styles</a></li>
+			<li><a href="events.html">Corporate Events</a></li>
+			<li><a href="contact.html">Contact</a></li>
 		</ul>
 	</amp-sidebar>
   <header>
@@ -298,7 +320,8 @@
 					width="320"
 					height="180"
 					layout="fixed"
-					data-videoid="5Lcto1qszks">
+					data-videoid="5Lcto1qszks"
+					[data-videoid]="videoId">
 				</amp-youtube>
 				<div id="close-lightbox"
 					on="tap:lightbox.close"
@@ -370,6 +393,94 @@
 					<p>
 						Pete has an outstanding ability to teach dancers and non-dancers how to move. Whether it be movement coaching for professionals and taking their career to the next level. Coaching actors, artists, teaching online groups or In House classes to a few of the Worlds Best Global Brands. 	Pete does it all from choreographing Gwen Stefani's, "Misery" video to training Travis Barker's kids how to dance. The list goes on.
 					</p>
+				</div>
+				<div class="paragraph">
+					<h3>Class Videos</h3>
+					<h4>Advanced</h4>
+				</div>
+				<div class="video-container">
+					<amp-img src="images/covers/lion.jpg"
+						width="480"
+						height="270"
+						layout="responsive"
+						on="tap:lightbox,AMP.setState({videoId: '4i_BY9qgWU4'})"
+						role="button"
+						tabindex="1"
+						alt="Lion Class Video by Pete Styles"></amp-img>
+					<amp-img src="images/covers/lurkin.jpg"
+						width="480"
+						height="270"
+						layout="responsive"
+						on="tap:lightbox,AMP.setState({videoId: 'FTr4ZF2vzlg'})"
+						role="button"
+						tabindex="1"
+						alt="Class Video to Lurkin by Chris Brown"></amp-img>
+					<amp-img src="images/covers/apale_rosalia.jpg"
+						width="480"
+						height="270"
+						layout="responsive"
+						on="tap:lightbox,AMP.setState({videoId: 'O-VXb0uwR2w'})"
+						role="button"
+						tabindex="1"
+						alt="Class video to A Pale by Rosalia"></amp-img>
+					<amp-img src="images/covers/natural_disaster.jpg"
+						width="480"
+						height="270"
+						layout="responsive"
+						on="tap:lightbox,AMP.setState({videoId: 'Wo-jHZY-Cp8'})"
+						role="button"
+						tabindex="1"
+						alt="Class video to Natural Disaster by Chris Brown"></amp-img>
+				</div>
+				<div class="paragraph">
+					<h4>Beginners</h4>
+				</div>
+				<div class="video-container">
+					<amp-img src="images/covers/before_i_let_go.jpg"
+						width="480"
+						height="270"
+						layout="responsive"
+						on="tap:lightbox,AMP.setState({videoId: 'GZdBoF5A9Hk'})"
+						role="button"
+						tabindex="1"
+						alt="Beginners class to Before I let go by Beyonce"></amp-img>
+					<amp-img src="images/covers/sicks.jpg"
+						width="480"
+						height="270"
+						layout="responsive"
+						on="tap:lightbox,AMP.setState({videoId: 'nkFPNadwnZo'})"
+						role="button"
+						tabindex="1"
+						alt="PHZ - Sicks Class Video"></amp-img>
+					<amp-img src="images/covers/thats_it.jpg"
+						width="480"
+						height="270"
+						layout="responsive"
+						on="tap:lightbox,AMP.setState({videoId: 'M1cKfqjSb5o'})"
+						role="button"
+						tabindex="1"
+						alt="Class video to That's it by Bebe Rexha"></amp-img>
+				</div>
+				<div class="paragraph">
+					<h4>Kids</h4>
+				</div>
+				<div class="video-container">
+					<amp-img src="images/covers/juice.jpg"
+						width="480"
+						height="270"
+						layout="responsive"
+						on="tap:lightbox,AMP.setState({videoId: 'XAjjpkscCRk'})"
+						role="button"
+						tabindex="1"
+						alt="Class video to Yo Gotti - Juice "></amp-img>
+					<amp-img src="images/covers/i_spy.jpg"
+						width="480"
+						height="270"
+						layout="responsive"
+						on="tap:lightbox,AMP.setState({videoId: 'vUsRz1xkKVk'})"
+						role="button"
+						tabindex="1"
+						alt="Let Go by Johnny Orlando"></amp-img>
 				</div>
 			</div>
 		</div>
